@@ -37,7 +37,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }} {{ request()->routeIs('genero.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
+            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }} {{ request()->routeIs('genero.*') ? 'active' : '' }} {{ request()->routeIs('estado.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
                 <i class="mdi mdi-database"></i> <span data-key="t-multi-level">Registro general</span>
             </a>
             <div class="collapse menu-dropdown" id="sidebarMultilevel">
@@ -47,6 +47,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('/genero') }}" class="nav-link  {{ request()->routeIs('genero.*') ? 'active' : '' }}" data-key="t-registro-paises"> Género </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/estado') }}" class="nav-link  {{ request()->routeIs('estado.*') ? 'active' : '' }}" data-key="t-registro-Estado-Civil"> Estado Civil </a>
                     </li>
                 </ul>
             </div>

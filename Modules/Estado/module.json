@@ -1,0 +1,13 @@
+{
+    "name": "Estado",
+    "alias": "estado",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Estado\\Providers\\EstadoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
