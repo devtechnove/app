@@ -1,0 +1,13 @@
+{
+    "name": "GradoI",
+    "alias": "gradoi",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\GradoI\\Providers\\GradoIServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

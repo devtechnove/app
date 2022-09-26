@@ -8,5 +8,6 @@
     "Genero": true,
     "Estado": true,
     "GradoM": true,
-    "Nacionalidad": true
+    "Nacionalidad": true,
+    "GradoI": true
 }

@@ -1,9 +1,9 @@
 @extends('layouts.admin')
-@section('title','GÉNERO')
+@section('title','GRADO DE INSTRUCCION')
 @section('breadcrumb')
  <ol class="breadcrumb m-0">
     <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
-    <li class="breadcrumb-item active">Listado de géneros</li>
+    <li class="breadcrumb-item active">Listado de grado de instrucción</li>
 </ol>
 @endsection
 @section('content')
@@ -11,7 +11,7 @@
      <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h3>Listado de género</h3>
+        <h3>Listado de grado de instrucción</h3>
       </div>
        <!-- /.card-header -->
           <div class="card-body table-responsive">
@@ -20,23 +20,16 @@
               <thead>
               <tr class="text-center">
               <th>#</th>
-               <th>Géneros</th>
-               <th>Ícono</th>
+               <th>Grado de instrucción</th>
               <th>Fecha de registro</th>
               </tr>
               </thead>
               <tbody>
-              @foreach ($generos as $genero)
+              @foreach ($gradoi as $genero)
               <tr class="row{{ $genero->id }} text-center">
               <td>{{ $genero->id }}</td>
-              <td>{{ $genero->nb_genero }}</td>
-              <td>
-                  @if ($genero->nb_genero == 'Masculino')
-                      <span><i class="mdi mdi-human-male blue-text" style="font-size:200%"></i></span>
-                  @else
-                      <span><i class="mdi mdi-human-female pink-text" style="font-size:200%"></i></span>
-                  @endif
-              </td>
+              <td>{{ $genero->nb_grado_instruccion }}</td>
+
               <td>{{ $genero->created_at }}</td>
               </tr>
               @endforeach
