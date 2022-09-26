@@ -6,5 +6,6 @@
     "Log": true,
     "Pais": true,
     "Genero": true,
-    "Estado": true
+    "Estado": true,
+    "GradoM": true
 }

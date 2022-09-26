@@ -1,0 +1,13 @@
+{
+    "name": "GradoM",
+    "alias": "gradom",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\GradoM\\Providers\\GradoMServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

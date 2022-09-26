@@ -3,7 +3,7 @@
 @section('breadcrumb')
  <ol class="breadcrumb m-0">
     <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
-    <li class="breadcrumb-item active">Listado de estado civil</li>
+    <li class="breadcrumb-item active">Listado de grado ministerial</li>
 </ol>
 @endsection
 @section('content')
@@ -11,7 +11,7 @@
      <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h3>Listado de estado civil cargados al  sistema</h3>
+        <h3>Listado de grado ministerial</h3>
       </div>
        <!-- /.card-header -->
           <div class="card-body table-responsive">
@@ -25,10 +25,10 @@
               </tr>
               </thead>
               <tbody>
-              @foreach ($estados as $login)
+              @foreach ($grado as $login)
               <tr class="row{{ $login->id }} text-center">
               <td>{{ $login->id }}</td>
-              <td>{{ $login->nb_estado_civil }}</td>
+              <td>{{ $login->nb_grado_ministerial }}</td>
               <td>{{ $login->created_at }}</td>
               </tr>
               @endforeach
