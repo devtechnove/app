@@ -13,8 +13,9 @@
 <div>
  <div class="row  mt-2">
     <div class="col-sm-12">
-                <form action="{{ route('roles.store') }}" method="POST">
-                    @csrf
+                <form id="main-form" autocomplete="off"><br>
+                  <input type="hidden" id="_url" value="{{ url('/roles') }}">
+                  <input type="hidden" id="_token" value="{{ csrf_token() }}">
 
                     <div class="card">
                         <div class="card-header">
@@ -310,4 +311,5 @@
             })
         });
     </script>
+    <script src="{{ asset('/assets/js/admin/form/usuarios/create.js') }}"></script>
 @endsection

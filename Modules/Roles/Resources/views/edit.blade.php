@@ -1,7 +1,13 @@
 @extends('layouts.admin')
 
 @section('title', 'ROLES')
-
+ @section('breadcrumb')
+<ol class="breadcrumb m-0">
+    <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/roles">Listado general</a></li>
+    <li class="breadcrumb-item active">Modificación de registro</li>
+</ol>
+@endsection
 @section('styles')
  <!-- vendor css files -->
   <link rel="stylesheet" href="{{ asset('/assets/libs/animate.css/animate.min.css') }}">
@@ -13,8 +19,9 @@
       <div class="row">
     <div class="col-sm-12">
         <div class="card">
-                <form action="{{ route('roles.update', $role->id) }}" method="POST">
-                    @csrf
+                <form id="main-form" autocomplete="off"><br>
+                  <input type="hidden" id="_url" value="{{ route('roles.update',$role->id) }}">
+                  <input type="hidden" id="_token" value="{{ csrf_token() }}">
                     @method('patch')
                     <div class="form-group">
 
@@ -315,5 +322,5 @@
             })
         });
     </script>
-    <script src="assets/js/pages/form-advanced.init.js"></script>
+     <script src="{{ asset('/assets/js/admin/form/usuarios/edit.js') }}"></script>
 @endsection

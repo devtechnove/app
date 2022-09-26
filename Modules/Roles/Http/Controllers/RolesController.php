@@ -71,15 +71,12 @@ class RolesController extends Controller
 
         $role->givePermissionTo($request->permissions);
 
-         \Alert::alert('¡Bien hecho!', '¡Role creado con los permisos seleccionados!.', 'success');
-
-        return redirect()->route('roles.index');
+         return json_encode(['success' => true, 'role_id' => $role->id]);
 
         } catch (\Exception $e) {
 
 
-           \Alert::alert('¡Uuuups!', 'Algo salió mal.', 'error');
-           return redirect()->route('roles.create'); 
+            return json_encode(['success' => false]);
             
         }
 
@@ -120,12 +117,11 @@ class RolesController extends Controller
 
         \Alert::alert('¡Bien hecho!', '¡Role actualizado con los permisos seleccionados!.', 'success');
 
-        return redirect()->route('roles.index');
+        return json_encode(['success' => true]);
            
        } catch (\Exception $e) {
            
-            \Alert::alert('¡Uuuups!', 'Algo salió mal.', 'error');
-           return redirect()->route('roles.index');
+            return json_encode(['success' => false]);
        }
     }
 
