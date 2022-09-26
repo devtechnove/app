@@ -1,0 +1,7 @@
+{
+    "Empresa": true,
+    "Login": true,
+    "Usuarios": true,
+    "Roles": true,
+    "Log": true
+}
