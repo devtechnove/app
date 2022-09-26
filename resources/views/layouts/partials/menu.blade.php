@@ -37,13 +37,16 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
+            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }} {{ request()->routeIs('genero.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
                 <i class="mdi mdi-database"></i> <span data-key="t-multi-level">Registro general</span>
             </a>
             <div class="collapse menu-dropdown" id="sidebarMultilevel">
                 <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
                         <a href="{{ url('/pais') }}" class="nav-link  {{ request()->routeIs('pais.*') ? 'active' : '' }}" data-key="t-registro-paises"> Países </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/genero') }}" class="nav-link  {{ request()->routeIs('genero.*') ? 'active' : '' }}" data-key="t-registro-paises"> Género </a>
                     </li>
                 </ul>
             </div>

@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         //$this->call(\Modules\Usuarios\Database\Seeders\UsuariosTableSeeder::class);
         $this->call(\Modules\Empresa\Database\Seeders\EmpresaTableSeeder::class);
         $this->call(\Modules\Pais\Database\Seeders\PaisDatabaseSeeder::class);
+        $this->call(\Modules\Genero\Database\Seeders\GeneroDatabaseSeeder::class);
     }
 }

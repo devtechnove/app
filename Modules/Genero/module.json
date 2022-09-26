@@ -1,0 +1,13 @@
+{
+    "name": "Genero",
+    "alias": "genero",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Genero\\Providers\\GeneroServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -4,5 +4,6 @@
     "Usuarios": true,
     "Roles": true,
     "Log": true,
-    "Pais": true
+    "Pais": true,
+    "Genero": true
 }
