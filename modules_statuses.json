@@ -3,5 +3,6 @@
     "Login": true,
     "Usuarios": true,
     "Roles": true,
-    "Log": true
+    "Log": true,
+    "Pais": true
 }

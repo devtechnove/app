@@ -1,0 +1,13 @@
+{
+    "name": "Pais",
+    "alias": "pais",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pais\\Providers\\PaisServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
