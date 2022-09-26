@@ -1,5 +1,5 @@
 @extends('layouts/admin')
-@section('title', 'ROLES')
+@section('title', 'USUARIOS')
 @section('breadcrumb')
 <ol class="breadcrumb m-0">
     <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
@@ -11,31 +11,56 @@
 <div class="row mt-2 animate__animated_fadeIn animate__fadeIn animate__delay-1s">
     <div class="col-sm-12">
         <div class="card">
-             {!!Form::open(['method'=>'POST','route'=>['usuarios.store'], 'files'=>'true','autocomplete' => 'off'])!!}
+              <form id="main-form" autocomplete="off"><br>
+                  <input type="hidden" id="_url" value="{{ url('/usuarios') }}">
+                  <input type="hidden" id="_token" value="{{ csrf_token() }}">
               <div class="card-body">
                <div class="row">
                    <div class="col-sm-6 mt-2">
-                            <div class="form-group">
-                                <label for="register-email" class="form-label">Nombre completo</label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="register-name" name="name" placeholder="Nombre del usuario" aria-describedby="register-name" tabindex="2" value="{{ old('name') }}" />
-                                @error('name')
-                                  <span class="invalid-feedback" role="alert">
-                                    <small>{{ $message }}</small>
-                                  </span>
-                                @enderror
-                             </div>
+                        <div class="form-group">
+                            <label for="register-email" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="register-name" name="name" placeholder="Nombre del usuario" aria-describedby="register-name" tabindex="2" value="{{ old('name') }}" />
+                            @error('name')
+                              <span class="invalid-feedback" role="alert">
+                                <small>{{ $message }}</small>
+                              </span>
+                            @enderror
                          </div>
-                          <div class="col-sm-6 mt-2">
-                            <div class="form-group">
-                                <label for="register-email" class="form-label">Cédula del usuario</label>
-                                <input type="number" class="form-control @error('cedula') is-invalid @enderror" id="register-cedula" name="cedula" placeholder="Cédula del usuario" aria-describedby="register-name" tabindex="2" value="{{ old('name') }}" />
-                                @error('cedula')
-                                  <span class="invalid-feedback" role="alert">
-                                    <small>{{ $message }}</small>
-                                  </span>
-                                @enderror
-                             </div>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                        <div class="form-group">
+                            <label for="register-username" class="form-label">Usuario</label>
+                            <input type="text" class="form-control @error('username') is-invalid @enderror" id="register-username" name="username" placeholder="Distrito del usuario" aria-describedby="register-username" tabindex="2" value="{{ old('distrito') }}" />
+                            @error('username')
+                              <span class="invalid-feedback" role="alert">
+                                <small>{{ $message }}</small>
+                              </span>
+                            @enderror
                          </div>
+                    </div>
+                     <div class="col-sm-6 mt-2">
+                        <div class="form-group">
+                            <label for="register-zona" class="form-label">Zona</label>
+                            <input type="number" class="form-control @error('zona') is-invalid @enderror" id="register-zona" name="zona" placeholder="Zona del usuario" aria-describedby="register-zona" tabindex="2" value="{{ old('zona') }}" />
+                            @error('zona')
+                              <span class="invalid-feedback" role="alert">
+                                <small>{{ $message }}</small>
+                              </span>
+                            @enderror
+                         </div>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                        <div class="form-group">
+                            <label for="register-distrito" class="form-label">Distrito</label>
+                            <input type="number" class="form-control @error('distrito') is-invalid @enderror" id="register-distrito" name="distrito" placeholder="Distrito del usuario" aria-describedby="register-distrito" tabindex="2" value="{{ old('distrito') }}" />
+                            @error('distrito')
+                              <span class="invalid-feedback" role="alert">
+                                <small>{{ $message }}</small>
+                              </span>
+                            @enderror
+                         </div>
+                    </div>
+
                           <div class="col-sm-4 mt-2">
                             <div class="form-group">
                                 <label for="register-email" class="form-label">Corre electrónico</label>
@@ -50,12 +75,14 @@
                          <div class="col-sm-4 mt-2">
                             <label for="nu_contacto">Empresa</label>
                           {!! Form::select('empresa_id', $empresas, null, [
-                             'class' => 'form-control','placeholder' =>'Seleccione']) !!}
+                             'class' => 'form-control', 'id' =>'register-empresa']) !!}
                          </div>
                           <div class="col-sm-4 mt-2">
                             <label for="nu_contacto">Estado del usuario</label>
                           {!! Form::select('status', $estados, null, [
-                             'class' => 'form-control','placeholder' =>'Seleccione']) !!}
+                             'class' => 'form-control',
+                             'placeholder' =>'Seleccione',
+                             'id' => 'register-estado']) !!}
                           </div>
                         <div class="col-sm-4 mt-2">
                             <label for="nu_contacto">Role del usuario</label>
@@ -97,4 +124,7 @@
     </div>
 </div>
 
+@endsection
+@section('scripts')
+  <script src="{{ asset('/assets/js/admin/form/usuarios/create.js') }}"></script>
 @endsection

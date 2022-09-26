@@ -30,6 +30,7 @@
     <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
 
     <link href="/assets/css/system.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('/assets/libs/toastify/css/toastify.css') }}">
 </head>
 
 <body>
@@ -147,7 +148,7 @@
         <script src="/assets/libs/node-waves/waves.min.js"></script>
         <script src="/assets/libs/feather-icons/feather.min.js"></script>
         <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/pplugins.js"></script>
 
         <!-- apexcharts -->
         <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
@@ -161,6 +162,8 @@
 
         <!-- App js -->
         <script src="/assets/js/app.js"></script>
+        <script src="/assets/js/some.js"></script>
+         <script src="{{ asset('assets/libs/toastify/js/toastify.js') }}" ></script>
          <script>
             $(window).on('load', function() {
                 if (feather) {

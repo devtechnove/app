@@ -1,21 +1,13 @@
 @extends('layouts/admin')
 @section('title', 'USUARIOS')
 @section('breadcrumb')
- <ol class="breadcrumb m-0">
-    <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="/usuarios">Usuarios</a></li>
-    <li class="breadcrumb-item active">Listado general</li>
-</ol>
-@endsection
-@section('breadcrumb')
-
-   <div class="container-fluid">
         <ol class="breadcrumb border-0 m-0">
         <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li>
-        <li class="breadcrumb-item active">Datos principales de los usuarios.</li>
+        <li class="breadcrumb-item active">Listado general.</li>
     </ol>
-   </div>
+
 @endsection
+
 @section('content')
  @include('sweetalert::alert')
  <div class="row mt-2">

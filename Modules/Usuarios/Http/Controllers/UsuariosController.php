@@ -95,7 +95,7 @@ class UsuariosController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'empresa_id' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            'cedula' => ['required', 'numeric', 'unique:users'],
+            //'cedula' => ['required', 'numeric', 'unique:users'],
             'empresa_id' => ['required'],
             'email' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -105,7 +105,9 @@ class UsuariosController extends Controller
          $usuario = new User();
 
          $usuario->name = $request->name;
-         $usuario->cedula = $request->cedula;
+         $usuario->username = $request->username;
+         $usuario->zona = $request->zona;
+         $usuario->distrito = $request->distrito;
          $usuario->email = $request->email;
          $usuario->status = $request->status;
          $usuario->role_id = $request->role_id;
@@ -117,10 +119,7 @@ class UsuariosController extends Controller
          $role = Role::findById($request->role_id);
          $usuario->assignRole($role->name);
 
-
-
-         \Alert::alert('¡Bien hecho!', 'Datos Ingresado', 'success');
-            return redirect()->to('usuarios');
+          return json_encode(['success' => true, 'user_id' => $usuario->id]);
 
          }
          else
@@ -137,13 +136,15 @@ class UsuariosController extends Controller
 
          $usuario = new User();
 
-         $usuario->name = $request->name;
-         $usuario->cedula = $request->cedula;
-         $usuario->email = $request->email;
-         $usuario->status = $request->status;
-         $usuario->role_id = $request->role_id;
-         $usuario->empresa_id = \Auth::user()->empresa_id;
-         $usuario->password = bcrypt($request->password);
+             $usuario->name = $request->name;
+             $usuario->username = $request->username;
+             $usuario->zona = $request->zona;
+             $usuario->distrito = $request->distrito;
+             $usuario->email = $request->email;
+             $usuario->status = $request->status;
+             $usuario->role_id = $request->role_id;
+             $usuario->empresa_id = $request->empresa_id;
+             $usuario->password = bcrypt($request->password);
          $usuario->save();
 
 
@@ -152,8 +153,8 @@ class UsuariosController extends Controller
 
 
 
-         \Alert::alert('¡Bien hecho!', 'Datos Ingresado', 'success');
-            return redirect()->to('usuarios');
+          return json_encode(['success' => true, 'user_id' => $usuario->id]);
+
 
          }
 
@@ -197,7 +198,7 @@ class UsuariosController extends Controller
          $usuarios = User::find($id);
          $empresas = Empresa::pluck('razon_social','id');
          $estados  =  [1 => 'Activo' ,0 => 'Inactivo'];
-         $roles    = Role::pluck('name','id');
+         $roles    = Role::get();
 
         return view('usuarios::edit',compact('usuarios','empresas','estados','roles'));
     }
@@ -233,14 +234,17 @@ class UsuariosController extends Controller
          $usuario = User::find($id);
 
          $usuario->name = $request->name;
-         $usuario->cedula = $request->cedula;
+         $usuario->username = $request->username;
+         $usuario->zona = $request->zona;
+         $usuario->distrito = $request->distrito;
          $usuario->email = $request->email;
          $usuario->status = $request->status;
          $usuario->role_id = $request->role_id;
+         $usuario->empresa_id = $request->empresa_id;
          $usuario->password = bcrypt($request->password);
          $usuario->save();
-         \Alert::alert('¡Bien hecho!', 'Datos modificados', 'success');
-            return redirect()->to('usuarios');
+
+         return json_encode(['success' => true, 'user_id' => $usuario->id]);
        }
        else
        {
@@ -257,18 +261,21 @@ class UsuariosController extends Controller
 
           $usuario = User::find($id);
 
-         $usuario->name = $request->name;
-         $usuario->cedula = $request->cedula;
-         $usuario->email = $request->email;
-         $usuario->status = $request->status;
-         $usuario->role_id = $request->role_id;
+             $usuario->name = $request->name;
+             $usuario->username = $request->username;
+             $usuario->zona = $request->zona;
+             $usuario->distrito = $request->distrito;
+             $usuario->email = $request->email;
+             $usuario->status = $request->status;
+             $usuario->role_id = $request->role_id;
+             $usuario->empresa_id = $request->empresa_id;
+             //$usuario->password = bcrypt($request->password);
          $usuario->save();
 
          $role = Role::findById($request->role_id);
          $usuario->syncRoles($role->name);
 
-         \Alert::alert('¡Bien hecho!', '¡Datos modificados satisfactoriamente!.', 'success');
-            return redirect()->to('usuarios');
+        return json_encode(['success' => true, 'user_id' => $usuario->id]);
        }
 
      }

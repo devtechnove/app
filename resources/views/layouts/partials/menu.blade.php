@@ -7,7 +7,7 @@
             <a href="/home" class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-home"></i> Inicio </a>
         </li> <!-- end Dashboard Menu -->
         <li class="nav-item">
-            <a href="/home" class="nav-link  {{ request()->routeIs('empresa.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-church"></i> Organización </a>
+            <a href="/empresa" class="nav-link  {{ request()->routeIs('empresa.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-church"></i> Organización </a>
         </li>
 
 
