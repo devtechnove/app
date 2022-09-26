@@ -1,9 +1,9 @@
 @extends('layouts.admin')
-@section('title','GRADO MINISTERIAL')
+@section('title','NACIONALIDAD')
 @section('breadcrumb')
  <ol class="breadcrumb m-0">
     <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
-    <li class="breadcrumb-item active">Listado de grado ministerial</li>
+    <li class="breadcrumb-item active">Listado de nacionalidad</li>
 </ol>
 @endsection
 @section('content')
@@ -11,7 +11,7 @@
      <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h3>Listado de grado ministerial</h3>
+        <h3>Listado de Nacionalidad</h3>
       </div>
        <!-- /.card-header -->
           <div class="card-body table-responsive">
@@ -20,15 +20,15 @@
               <thead>
               <tr class="text-center">
               <th>#</th>
-               <th>Pais</th>
+               <th>Nacionalidad</th>
               <th>Fecha de registro</th>
               </tr>
               </thead>
               <tbody>
-              @foreach ($grado as $login)
+              @foreach ($nacionalidad as $login)
               <tr class="row{{ $login->id }} text-center">
               <td>{{ $login->id }}</td>
-              <td>{{ $login->nb_grado_ministerial }}</td>
+              <td>{{ $login->nb_nacionalidad }}</td>
               <td>{{ $login->created_at }}</td>
               </tr>
               @endforeach

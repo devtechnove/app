@@ -12,5 +12,5 @@
 */
 
 Route::middleware('auth','actived')->group(function() {
-    Route::resource('/gradom', 'GradomController');
+    Route::resource('/nacionalidad', 'NacionalidadController');
 });

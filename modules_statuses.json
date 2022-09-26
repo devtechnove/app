@@ -7,5 +7,6 @@
     "Pais": true,
     "Genero": true,
     "Estado": true,
-    "GradoM": true
+    "GradoM": true,
+    "Nacionalidad": true
 }

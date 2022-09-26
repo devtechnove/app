@@ -1,0 +1,13 @@
+{
+    "name": "Nacionalidad",
+    "alias": "nacionalidad",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Nacionalidad\\Providers\\NacionalidadServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
