@@ -37,7 +37,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }} {{ request()->routeIs('genero.*') ? 'active' : '' }} {{ request()->routeIs('estado.*') ? 'active' : '' }} {{ request()->routeIs('gradom.*') ? 'active' : '' }} {{ request()->routeIs('nacionalidad.*') ? 'active' : '' }}{{ request()->routeIs('gradoi.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
+            <a class="nav-link menu-link {{ request()->routeIs('pais.*') ? 'active' : '' }} {{ request()->routeIs('genero.*') ? 'active' : '' }} {{ request()->routeIs('estado.*') ? 'active' : '' }} {{ request()->routeIs('gradom.*') ? 'active' : '' }} {{ request()->routeIs('nacionalidad.*') ? 'active' : '' }}{{ request()->routeIs('gradoi.*') ? 'active' : '' }} {{ request()->routeIs('tipos.*') ? 'active' : '' }}" href="#sidebarMultilevel" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
                 <i class="mdi mdi-database"></i> <span data-key="t-multi-level">Registro general</span>
             </a>
             <div class="collapse menu-dropdown" id="sidebarMultilevel">
@@ -59,6 +59,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('/gradoi') }}" class="nav-link  {{ request()->routeIs('gradoi.*') ? 'active' : '' }}" data-key="t-registro-Grado-Instruccion"> Grado de Instrucción </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/tipos') }}" class="nav-link  {{ request()->routeIs('tipos.*') ? 'active' : '' }}" data-key="t-registro-Tipo-Sangre"> Tipo de sangre </a>
                     </li>
                 </ul>
             </div>

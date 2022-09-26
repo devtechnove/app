@@ -1,0 +1,13 @@
+{
+    "name": "TipoS",
+    "alias": "tipos",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TipoS\\Providers\\TipoSServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

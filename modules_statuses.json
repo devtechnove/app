@@ -9,5 +9,6 @@
     "Estado": true,
     "GradoM": true,
     "Nacionalidad": true,
-    "GradoI": true
+    "GradoI": true,
+    "TipoS": true
 }

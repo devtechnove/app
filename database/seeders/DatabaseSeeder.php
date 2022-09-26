@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Modules\GradoM\Database\Seeders\GradoMDatabaseSeeder::class);
         $this->call(\Modules\Nacionalidad\Database\Seeders\NacionalidadDatabaseSeeder::class);
         $this->call(\Modules\GradoI\Database\Seeders\GradoIDatabaseSeeder::class);
+        $this->call(\Modules\TipoS\Database\Seeders\TipoSDatabaseSeeder::class);
 
 
 
