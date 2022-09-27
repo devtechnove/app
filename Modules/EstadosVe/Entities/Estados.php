@@ -20,12 +20,12 @@ class Estados extends Model
      public function estado()
     {
 
-         return $this->HasMany('App\Models\Estados', 'id');
+         return $this->HasMany('\Modules\EstadosVe\Entities\Estados', 'id');
     }
 
     public function municipios()
     {
 
-         return $this->HasMany('App\Models\Municipios', 'estado_id');
+         return $this->HasMany('\Modules\EstadosVe\Entities\Municipios', 'estado_id');
     }
 }
