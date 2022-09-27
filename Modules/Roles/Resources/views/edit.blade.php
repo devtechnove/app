@@ -49,7 +49,7 @@
                             </div>
                             <div class="row">
                                  <!-- Usuarios Permission -->
-                                <div class="mt-2 col-lg-4 col-md-6">
+                                <div class="mt-2 col-lg-3 col-md-6">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Usuarios
@@ -103,7 +103,7 @@
                                 </div>
 
                                   <!-- Roles Permission -->
-                                <div class="mt-2 col-lg-4 col-md-6">
+                                <div class="mt-2 col-lg-3 col-md-6">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Roles
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                  <!-- Permisos Permission -->
-                                <div class="mt-2 col-lg-4 col-md-6">
+                                <div class="mt-2 col-lg-3 col-md-6">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Permisos
@@ -209,7 +209,7 @@
                                     </div>
                                 </div>
                                   <!-- Permisos Permission -->
-                                <div class="mt-2 col-lg-4 col-md-6">
+                                <div class="mt-2 col-lg-3 col-md-6">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Ente
@@ -262,7 +262,7 @@
                                     </div>
                                 </div>
                                  <!-- Permisos Permission -->
-                                <div class="mt-2 col-lg-4 col-md-6">
+                                <div class="mt-2 col-lg-3 col-md-6">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Historial de sesión
@@ -290,6 +290,230 @@
                                     </div>
                                 </div>
                                   <!-- Especialidades Permission -->
+                                   <!-- Permisos Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow">
+                                    <div class="card-header">
+                                        Países en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_pais" name="permissions[]"
+                                                           value="acceso_pais" {{ $role->hasPermissionTo('acceso_pais') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_pais">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Pais" name="permissions[]"
+                                                           value="Ver Pais" {{ $role->hasPermissionTo('Ver Pais') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Pais">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Genero Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow">
+                                    <div class="card-header">
+                                        Género en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_genero" name="permissions[]"
+                                                           value="acceso_genero" {{ $role->hasPermissionTo('acceso_genero') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_genero">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Genero" name="permissions[]"
+                                                           value="Ver Genero" {{ $role->hasPermissionTo('Ver Genero') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Genero">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Genero Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow">
+                                    <div class="card-header">
+                                        Estado Civil en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_estado_civil" name="permissions[]"
+                                                           value="acceso_estado_civil" {{ $role->hasPermissionTo('acceso_estado_civil') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_estado_civil">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Estado Civil" name="permissions[]"
+                                                           value="Ver Estado Civil" {{ $role->hasPermissionTo('Ver Estado Civil') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Estado Civil">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Grado Ministerial Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow">
+                                    <div class="card-header">
+                                        Grado ministerial en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_grado_ministerial" name="permissions[]"
+                                                           value="acceso_grado_ministerial" {{ $role->hasPermissionTo('acceso_grado_ministerial') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_grado_ministerial">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Grado Ministerial" name="permissions[]"
+                                                           value="Ver Grado Ministerial" {{ $role->hasPermissionTo('Ver Grado Ministerial') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Grado Ministerial">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Grado Ministerial Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow">
+                                    <div class="card-header">
+                                        Nacionalidad en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_nacionalidad" name="permissions[]"
+                                                           value="acceso_nacionalidad" {{ $role->hasPermissionTo('acceso_nacionalidad') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_nacionalidad">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Nacionalidad" name="permissions[]"
+                                                           value="Ver Nacionalidad" {{ $role->hasPermissionTo('Ver Nacionalidad') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Nacionalidad">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Grado Instruccion Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow ">
+                                    <div class="card-header">
+                                        Grado de Instruccion en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_grado_instruccion" name="permissions[]"
+                                                           value="acceso_grado_instruccion" {{ $role->hasPermissionTo('acceso_grado_instruccion') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_grado_instruccion">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Grado Instruccion" name="permissions[]"
+                                                           value="Ver Grado Instruccion" {{ $role->hasPermissionTo('Ver Grado Instruccion') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Grado Instruccion">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tipo Sangre Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow ">
+                                    <div class="card-header">
+                                        Tipo de Sangre en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_tipo_sangre" name="permissions[]"
+                                                           value="acceso_tipo_sangre" {{ $role->hasPermissionTo('acceso_tipo_sangre') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_tipo_sangre">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Tipo Sangre" name="permissions[]"
+                                                           value="Ver Tipo Sangre" {{ $role->hasPermissionTo('Ver Tipo Sangre') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Tipo Sangre">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tipo Local Permission -->
+                            <div class="mt-2 col-lg-3 col-md-6">
+                                <div class="card h-100 border-0 shadow ">
+                                    <div class="card-header">
+                                        Tipo de Local en general
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="acceso_tipo_local" name="permissions[]"
+                                                           value="acceso_tipo_local" {{ $role->hasPermissionTo('acceso_tipo_local') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="acceso_tipo_local">Acceso</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check form-switch form-switch-sm mb-3">
+                                                    <input type="checkbox" class="form-check-input"
+                                                           id="Ver Tipo Local" name="permissions[]"
+                                                           value="Ver Tipo Local" {{ $role->hasPermissionTo('Ver Tipo Local') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label" for="Ver Tipo Local">Ver</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
                             </div>

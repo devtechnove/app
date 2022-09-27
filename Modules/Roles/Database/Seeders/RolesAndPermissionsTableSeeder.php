@@ -62,6 +62,39 @@ class RolesAndPermissionsTableSeeder extends Seeder
                                 'Editar Empresa',
                                 'Eliminar Empresa',
 
+                                /* Pais */
+                                'acceso_pais',
+                                'Ver Pais',
+
+                                  /* Genero */
+                                'acceso_genero',
+                                'Ver Genero',
+
+                                 /* Estado Civil */
+                                'acceso_estado_civil',
+                                'Ver Estado Civil',
+
+                                /* Grado Ministerial */
+                                'acceso_grado_ministerial',
+                                'Ver Grado Ministerial',
+
+                                 /* Nacionalidad */
+                                'acceso_nacionalidad',
+                                'Ver Nacionalidad',
+
+                                /* Grado Instruccion */
+                                'acceso_grado_instruccion',
+                                'Ver Grado Instruccion',
+
+                                /* Tipo Sangre */
+                                'acceso_tipo_sangre',
+                                'Ver Tipo Sangre',
+
+                                /* Tipo Local */
+                                'acceso_tipo_local',
+                                'Ver Tipo Local',
+
+
                               ];
 
 
