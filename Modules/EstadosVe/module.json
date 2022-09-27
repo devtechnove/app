@@ -1,0 +1,13 @@
+{
+    "name": "EstadosVe",
+    "alias": "estadosve",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\EstadosVe\\Providers\\EstadosVeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

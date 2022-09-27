@@ -11,5 +11,6 @@
     "Nacionalidad": true,
     "GradoI": true,
     "TipoS": true,
-    "TipoL": true
+    "TipoL": true,
+    "EstadosVe": true
 }

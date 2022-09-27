@@ -9,7 +9,7 @@ class Estado extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $table = 'estadoc';
     
     protected static function newFactory()
     {
