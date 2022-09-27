@@ -13,15 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
 
         $this->call(\Modules\Roles\Database\Seeders\RolesAndPermissionsTableSeeder::class);
-        //$this->call(\Modules\Usuarios\Database\Seeders\UsuariosTableSeeder::class);
         $this->call(\Modules\Empresa\Database\Seeders\EmpresaTableSeeder::class);
         $this->call(\Modules\Pais\Database\Seeders\PaisDatabaseSeeder::class);
         $this->call(\Modules\Genero\Database\Seeders\GeneroDatabaseSeeder::class);
@@ -30,8 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(\Modules\Nacionalidad\Database\Seeders\NacionalidadDatabaseSeeder::class);
         $this->call(\Modules\GradoI\Database\Seeders\GradoIDatabaseSeeder::class);
         $this->call(\Modules\TipoS\Database\Seeders\TipoSDatabaseSeeder::class);
-
-
+        $this->call(\Modules\TipoL\Database\Seeders\TipoLDatabaseSeeder::class);
 
 
     }

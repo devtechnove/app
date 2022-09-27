@@ -565,7 +565,7 @@
 
                                 <div class="text-reset notification-item d-block dropdown-item">
                                     <div class="d-flex">
-                                        <img src="/assets/images/users/avatar-2.jpg"
+                                        <img src="/assets/images/users/user-dummy-img.jpg"
                                             class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-1">
                                             <a href="#!" class="stretched-link">
@@ -665,7 +665,7 @@
                 <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <span class="d-flex align-items-center">
-                        <img class="rounded-circle header-profile-user" src="/assets/images/users/avatar-1.jpg"
+                        <img class="rounded-circle header-profile-user" src="/assets/images/users/user-dummy-img.jpg"
                             alt="Header Avatar">
                         <span class="text-start ms-xl-2">
                             <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{ \Auth::user()->name }}</span>

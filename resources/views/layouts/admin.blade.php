@@ -41,6 +41,13 @@
 
 <body>
 
+     <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
     <!-- Begin page -->
     <div id="layout-wrapper">
 
@@ -180,6 +187,14 @@
         <script src="/assets/libs/datatable/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
         <script src="/assets/libs/datatable/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
         <script src="/assets/libs/datatable/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script>
+        $( document ).ready(function()
+            {
+                $("#status").fadeOut();
+                $("#preloader").delay(100).fadeOut("slow")
+            })
+
+    </script>
          <script>
             $(window).on('load', function() {
                 if (feather) {

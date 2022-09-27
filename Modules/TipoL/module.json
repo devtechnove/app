@@ -1,0 +1,13 @@
+{
+    "name": "TipoL",
+    "alias": "tipol",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\TipoL\\Providers\\TipoLServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

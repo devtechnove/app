@@ -31,9 +31,16 @@
     <link href="/assets/css/some.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/system.css" rel="stylesheet" type="text/css" />
     @yield('styles')
+
 </head>
 
 <body>
+    <!-- Loader -->
+        <div id="preloader">
+            <div id="status">
+                <div class="spinner"></div>
+            </div>
+        </div>
 
     <!-- auth-page wrapper -->
     <div class="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
@@ -74,6 +81,13 @@
     <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/some.js"></script>
+    <script>
+        $( document ).ready(function()
+            {
+                $("#status").fadeOut(),$("#preloader").delay(350).fadeOut("slow")
+            })
+
+    </script>
      <script>
         $(window).on('load', function() {
             if (feather) {

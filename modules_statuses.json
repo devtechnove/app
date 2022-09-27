@@ -10,5 +10,6 @@
     "GradoM": true,
     "Nacionalidad": true,
     "GradoI": true,
-    "TipoS": true
+    "TipoS": true,
+    "TipoL": true
 }
