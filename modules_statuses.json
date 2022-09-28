@@ -12,5 +12,6 @@
     "GradoI": true,
     "TipoS": true,
     "TipoL": true,
-    "EstadosVe": true
+    "EstadosVe": true,
+    "Pastor": true
 }

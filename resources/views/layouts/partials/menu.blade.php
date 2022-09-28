@@ -7,7 +7,7 @@
             <a href="/home" class="nav-link  {{ request()->routeIs('home') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-home"></i> Inicio </a>
         </li> <!-- end Dashboard Menu -->
         <li class="nav-item">
-            <a href="/empresa" class="nav-link  {{ request()->routeIs('empresa.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-church"></i> Organización </a>
+            <a href="/empresa" class="nav-link  {{ request()->routeIs('empresa.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="fas fa-building"></i> Organización </a>
         </li>
 
 
@@ -69,6 +69,15 @@
 
                 </ul>
             </div>
+        </li>
+         <li class="nav-item">
+            <a href="/pastor" class="nav-link  {{ request()->routeIs('pastor.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="fas fa-user-tie"></i> Pastores </a>
+        </li>
+        <li class="nav-item">
+            <a href="/asistencia/actividad" class="nav-link  {{ request()->routeIs('pastor.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-check"></i> Asistencia</a>
+        </li>
+         <li class="nav-item">
+            <a href="/iglesia" class="nav-link  {{ request()->routeIs('iglesia.*') ? 'active' : '' }}" data-key="t-analytics"> <i class="mdi mdi-church"></i> Iglesias </a>
         </li>
 
     </ul>

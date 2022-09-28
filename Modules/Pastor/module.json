@@ -1,0 +1,13 @@
+{
+    "name": "Pastor",
+    "alias": "pastor",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Pastor\\Providers\\PastorServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

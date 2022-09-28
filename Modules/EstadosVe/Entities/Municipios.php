@@ -24,6 +24,6 @@ class Municipios extends Model
 
 
      public function estado(){
-        return $this->belongsTo(\Modules\EstadosVe\Entities\::class, 'estado_id');
+        return $this->belongsTo(\Modules\EstadosVe\Entities\Estados::class, 'estado_id');
     }
 }
